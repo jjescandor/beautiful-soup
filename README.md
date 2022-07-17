@@ -9,8 +9,8 @@
 
 - Scrape a Wikipedia page of your choosing and  this app will record which passages need citations.
 - E.g. History of Mexico has a few “citations needed”.
-- This app would report the number of citations needed.
-- This app would identify those cases AND include the relevant passage.
+- This app reports the number of citations needed.
+- This app identifies those cases AND include the relevant passage.
 - E.g. Citation needed for “lorem spam and impsum eggs”
 
 #### Implementation Notes
