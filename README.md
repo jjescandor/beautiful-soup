@@ -13,6 +13,10 @@
 - This app identifies those cases AND include the relevant passage.
 - E.g. Citation needed for “lorem spam and impsum eggs”
 
+### Run the app
+
+1. run scraper.py in the terminal
+
 #### Implementation Notes
 
 - Module must be named scraper.py
