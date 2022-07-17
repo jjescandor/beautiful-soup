@@ -32,11 +32,11 @@ def get_citations_needed_count(URL):
 def get_citations_needed_report(URL):
     citation_txt = "\n*** NEEDED CITATIONS ***\n"
     lst_paragprah = get_info(URL)
-    num = 0
+    num = 1
     for i, sentence in enumerate(lst_paragprah):
-        if "citation" in lst_paragprah[i]:
+        if "citation" in sentence:
             txt = (lst_paragprah[i-1].replace("[citation needed]", "").strip())
-            citation_txt+= f"\n{num+1}.) {txt}.\n"
+            citation_txt+= f"\n{num}.) {txt}.\n"
             num += 1
     return citation_txt
 
