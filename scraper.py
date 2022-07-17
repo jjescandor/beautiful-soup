@@ -45,6 +45,6 @@ def get_citations_needed_report(URL):
 
 
 if __name__ == "__main__":
-    URL_ = "https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre"
+    URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
     print("Number of Citations :", get_citations_needed_count(URL_))
     print(get_citations_needed_report(URL_))
