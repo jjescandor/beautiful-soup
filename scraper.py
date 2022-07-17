@@ -16,9 +16,9 @@ the string should be formatted with each citation listed in the order found.
 def get_info(URL):
     response = requests.get(URL)
     content = BeautifulSoup(response.content, "html.parser")
-    a_tag = content.find_all("p")
+    p_tags = content.find_all("p")
     paragraph = ""
-    for tag in a_tag:
+    for tag in p_tags:
         if "[citation needed]" in tag.text:
             paragraph += tag.text
     return paragraph.split(".")
