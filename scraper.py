@@ -31,7 +31,7 @@ def get_citations_needed_count(URL):
 
 def get_citations_needed_report(URL):
     citation_txt = []
-    citation_needed = ""
+    citation_needed = "\n*** NEEDED CITATIONS ***\n"
     lst_paragprah = get_info(URL)
     for i in range(len(lst_paragprah)):
         if "citation" in lst_paragprah[i]:
@@ -45,6 +45,8 @@ def get_citations_needed_report(URL):
 
 
 if __name__ == "__main__":
-    URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
-    print("Number of Citations :", get_citations_needed_count(URL_))
+    URL_ = input("\nEnter a url or press enter to see the needed citations in History of Taiwan Wikipedia article: \n").strip()
+    if not URL_:
+        URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
+    print("\nNumber of Citations Needed:", get_citations_needed_count(URL_))
     print(get_citations_needed_report(URL_))
