@@ -31,7 +31,7 @@ def test_taiwan_article_citation(taiwan_needed_citation):
 
 @pytest.fixture
 def bio_needed_citation():
-    return "1.)  Although now most often associated with the development of drugs, historically biotechnology has been principally associated with food, addressing such issues as malnutrition and famine."
+    return "1.) Although now most often associated with the development of drugs, historically biotechnology has been principally associated with food, addressing such issues as malnutrition and famine."
 
 @pytest.fixture
 def taiwan_needed_citation():
