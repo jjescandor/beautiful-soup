@@ -43,11 +43,14 @@ def get_citations_needed_report(URL):
 
 if __name__ == "__main__":
     URL_ = input("\nEnter a url or press enter to see the needed citations in History of Taiwan Wikipedia article: \n").strip()
-    if not URL_:
-        URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
-    num_cite = get_citations_needed_count(URL_)
-    if num_cite:
-        print("\nNumber of Citations Needed:", num_cite)
-        print(get_citations_needed_report(URL_))
+    if "en.wikipedia.org" not in URL_:
+        print("\n\n*** Invalid wikipedia url ***\n\n")
     else:
-        print("No citations needed")
+        if not URL_:
+            URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
+        num_cite = get_citations_needed_count(URL_)
+        if num_cite:
+            print("\nNumber of Citations Needed:", num_cite)
+            print(get_citations_needed_report(URL_))
+        else:
+            print("No citations needed")
