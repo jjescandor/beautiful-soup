@@ -45,5 +45,6 @@ if __name__ == "__main__":
     URL_ = input("\nEnter a url or press enter to see the needed citations in History of Taiwan Wikipedia article: \n").strip()
     if not URL_:
         URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
-    print("\nNumber of Citations Needed:", get_citations_needed_count(URL_))
+    num_cite = get_citations_needed_count(URL_)
+    print("\nNumber of Citations Needed:", num_cite)
     print(get_citations_needed_report(URL_))
