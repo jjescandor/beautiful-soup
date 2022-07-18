@@ -46,5 +46,8 @@ if __name__ == "__main__":
     if not URL_:
         URL_ = "https://en.wikipedia.org/wiki/History_of_Taiwan"
     num_cite = get_citations_needed_count(URL_)
-    print("\nNumber of Citations Needed:", num_cite)
-    print(get_citations_needed_report(URL_))
+    if num_cite:
+        print("\nNumber of Citations Needed:", num_cite)
+        print(get_citations_needed_report(URL_))
+    else:
+        print("No citations needed")
