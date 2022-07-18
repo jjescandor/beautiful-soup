@@ -43,7 +43,7 @@ def get_citations_needed_report(URL):
 
 if __name__ == "__main__":
     URL_ = input("\nEnter a url or press enter to see the needed citations in History of Taiwan Wikipedia article: \n").strip()
-    if len(URL_) > 1 and "en.wikipedia.org":
+    if len(URL_) > 1 and "en.wikipedia.org" not in URL_:
         print("\n\n*** Invalid wikipedia url ***\n\n")
     else:
         if URL_ == "":
